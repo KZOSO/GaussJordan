@@ -33,9 +33,9 @@ First of all you will use the function “compile” like is next shown (it is g
 
 		The files have been compiled.
 
-As you can see it shows a list with all the compiled files, these will be taken to ebin directory and stored there.
+As you can see it shows a list with all the files wich will be compiled, these are going to be taken to ebin directory and stored there.
 
-If you need to make a change and re-compile again the files you need to use the function “clear” as is shown in the next paragraph:
+If you need to make a change and compile again the files you need to use the function “clear” as is shown in the next paragraph:
 
 	$ make clear
 
