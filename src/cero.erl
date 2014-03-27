@@ -1,0 +1,13 @@
+-module(cero).
+-export([get/5]).
+-import(resta,[resta/2]). 
+get(Pivote,Pivote,Pivote,[H|_T],_)-> 
+        [H];
+get(Pivote,Goal,Goal,[H|_],Lpiv)->
+        N=exponente:obtener(Pivote,1,H),
+	[resta:resta([L*N||L<-Lpiv],H)];
+get(Pivote,Pivote,Goal,[H|T],Lpiv)->
+        [H]++get(Pivote,Pivote+1,Goal,T,Lpiv);
+get(Pivote,Counter,Goal,[H|T],Lpiv)->
+        N=exponente:obtener(Pivote,1,H),
+	[resta:resta([L*N||L<-Lpiv],H)]++get(Pivote,Counter+1,Goal,T,Lpiv).
